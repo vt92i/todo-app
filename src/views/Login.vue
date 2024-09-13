@@ -8,7 +8,7 @@ const password = ref('')
 <template>
   <div>
     <form>
-      <div>
+      <div style="display: flex; color: aquamarine">
         <label for="email">Email:</label>
         <input type="email" id="email" v-model="email" required />
       </div>
@@ -20,7 +20,3 @@ const password = ref('')
     </form>
   </div>
 </template>
-
-<styles>
-
-</styles>
