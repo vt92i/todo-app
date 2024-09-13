@@ -7,6 +7,9 @@ const password = ref('')
 </script>
 
 <template>
+  <head>
+    
+  </head>
   <div class="form-container">
     <h2>Login</h2>
     <form @submit="handleSubmit" class="form">
