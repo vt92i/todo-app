@@ -1,5 +1,5 @@
 <script setup>
-import { register } from '@/services/auth.service'
+import { register } from '@/services/auth.service.js'
 import { useCounterStore } from '@/stores/counter'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'

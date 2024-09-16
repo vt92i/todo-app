@@ -1,8 +1,11 @@
 import EditPage from '@/views/EditPage.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import AddPage from '../views/AddPage.vue'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/components/ToDoListTable.vue'
 import Tables from '../views/Tables.vue'
+import Register from '../views/RegisterView.vue'
+import About from '../views/AboutView.vue'
+import Login from '../views/LoginView.vue'
 import { login } from '@/services/auth.service'
 
 const router = createRouter({
@@ -11,7 +14,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: '',
+      name: '/',
       redirect: '/login'
     },
     {
@@ -22,20 +25,17 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: About
     },
     {
       path: '/register',
       name: 'register',
-      component: () => import('../views/RegisterView.vue')
+      component: Register
     },
     {
       path: '/login',
       name: 'login',
-      component: () => import('../views/LoginView.vue')
+      component: Login
     },
     {
       path: '/add',

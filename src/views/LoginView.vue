@@ -1,18 +1,16 @@
 <script setup>
 import { ref } from 'vue'
 import { login } from '@/services/auth.service'
+import { useRouter } from 'vue-router'
 
 const username = ref('')
 const password = ref('')
 </script>
 
 <template>
-  <head>
-    
-  </head>
   <div class="form-container">
-    <h2>Login</h2>
     <form @submit="handleSubmit" class="form">
+      <h2>Login</h2>
       <div class="form-group">
         <label for="username">Username:</label>
         <input type="text" id="username" v-model="username" required />
@@ -22,14 +20,25 @@ const password = ref('')
         <input type="password" id="password" v-model="password" required />
       </div>
       <button type="button" @click="login(username, password)" class="login-btn">Login</button>
+      <p>Don't have account?</p>
+      
     </form>
   </div>
 </template>
 
 <style scoped>
 .form-container {
-  max-width: 300px;
-  margin: 0 auto;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid red;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 300px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
