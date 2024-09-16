@@ -7,25 +7,31 @@ const password = ref('')
 </script>
 
 <template>
-  <div class="form-container">
-    <h2>Login</h2>
-    <form @submit="handleSubmit" class="form">
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" v-model="username" required />
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" v-model="password" required />
-      </div>
-      <button type="button" @click="login(username, password)" class="login-btn">Login</button>
-    </form>
+  <div class="container top-0 position-sticky z-index-sticky">
+    <h1 style="color: red">TO DO LIST APP BY JJ TEAM</h1>
+    <div class="form-container">
+      <h2>Login</h2>
+      <form @submit="handleSubmit" class="form">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" v-model="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" v-model="password" required />
+        </div>
+        <button type="button" @click="login(username, password)" class="login-btn">Login</button>
+        <p>Need an account?</p>
+        <RouterLink to="/register">Register Here</RouterLink>
+      </form>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .form-container {
-  max-width: 300px;
+  max-width: 100vw;
+  height: auto;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -33,6 +39,7 @@ const password = ref('')
 }
 
 .form-group {
+  width: 100%;
   margin-bottom: 15px;
 }
 

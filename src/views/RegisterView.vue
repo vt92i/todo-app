@@ -33,15 +33,16 @@ const signUp = async () => {
 
 <template>
   <div class="container top-0 position-sticky z-index-sticky">
+    <h1 style="color: red">TO DO LIST APP BY JJ TEAM</h1>
     <div class="sign-up-form">
-      <h2>Sign Up</h2>
-      <form @submit.prevent="signUp">
+      <form class="form-container" @submit.prevent="signUp">
+        <h2>Sign Up</h2>
         <div class="form-group">
           <label for="username">Username:</label>
           <input type="text" id="username" v-model="username" required />
         </div>
         <div class="form-group">
-          <label for="name">name:</label>
+          <label for="name">Name:</label>
           <input type="text" id="name" v-model="name" required />
         </div>
         <div class="form-group">
@@ -51,6 +52,8 @@ const signUp = async () => {
         <button type="submit" :disabled="isLoading">
           {{ isLoading ? 'Memproses...' : 'Sign Up' }}
         </button>
+        <p>Already an user?</p>
+        <RouterLink to="/login">Login Here</RouterLink>
       </form>
       <p v-if="error" class="error">{{ error }}</p>
     </div>
@@ -58,8 +61,9 @@ const signUp = async () => {
 </template>
 
 <style scoped>
-.sign-up-form {
-  max-width: 300px;
+.form-container {
+  max-width: 100vw;
+  height: auto;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -67,6 +71,7 @@ const signUp = async () => {
 }
 
 .form-group {
+  width: 100%;
   margin-bottom: 15px;
 }
 
