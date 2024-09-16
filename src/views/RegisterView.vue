@@ -21,7 +21,7 @@ const signUp = async () => {
     const data = await register(username.value, name.value, password.value)
     authStore.setToken(data.token)
     console.log('Sign up berhasil:', data)
-    router.push('/login')
+    router.push({ name: 'Login' })
   } catch (err) {
     error.value = err.response?.data?.message || 'Terjadi kesalahan saat sign up'
     console.error('Error saat sign up:', err)

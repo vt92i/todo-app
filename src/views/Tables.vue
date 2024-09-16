@@ -19,7 +19,7 @@
 export default {
   name: 'authors-tables',
   components: {
-    //AuthorsTable
+    // AuthorsTable
   },
   data() {
     return {

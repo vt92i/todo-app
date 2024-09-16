@@ -63,7 +63,8 @@ const category = ref('')
 
 const submitForm = async () => {
   try {
-    const response = await axios.post('https://963b-202-152-145-45.ngrok-free.app/api/todo', {
+    const baseURL = import.meta.env.VITE_BASE_URL
+    const response = await axios.post(`${baseURL}/api/todo`, {
       title: title.value,
       description: description.value,
       category: category.value
