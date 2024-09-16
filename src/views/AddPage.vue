@@ -41,6 +41,7 @@
                   </div>
                 </div>
               </form>
+              <router-link to="/tables">Back</router-link>
             </div>
           </div>
         </div>
